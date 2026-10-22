@@ -1,6 +1,6 @@
 # Agent IA Agri-Bénin
 
-Agent de **formation et sensibilisation** agricole au Bénin.
+Agent de **formation et sensibilisation** agricole au Bénin, propulsé par **Grok (xAI)**.
 
 ## Fonctionnalités
 
@@ -14,22 +14,23 @@ Agent de **formation et sensibilisation** agricole au Bénin.
 ## Stack
 
 - Next.js 15 (App Router)
-- Vercel AI SDK + **Google Gemini**
+- Vercel AI SDK + **Grok (xAI)**
 - Vercel Cron Jobs
 - Tailwind CSS
 
-## Clé API Gemini
+## Clé API Grok
 
-1. Va sur [Google AI Studio](https://aistudio.google.com/apikey)
-2. Crée une clé API
-3. Ajoute-la dans Vercel : `GOOGLE_GENERATIVE_AI_API_KEY`
+1. Va sur [console.x.ai](https://console.x.ai)
+2. Crée un compte / connecte-toi
+3. Génère une clé API
+4. Ajoute-la dans Vercel : `XAI_API_KEY`
 
 ## Démarrage local
 
 ```bash
 npm install
 cp .env.example .env.local
-# Ajoute ta GOOGLE_GENERATIVE_AI_API_KEY
+# Ajoute ta XAI_API_KEY
 npm run dev
 ```
 
@@ -37,7 +38,7 @@ npm run dev
 
 1. Importe le repo `kingkoffi/agent-agri-benin`
 2. Variables d'environnement :
-   - `GOOGLE_GENERATIVE_AI_API_KEY`
+   - `XAI_API_KEY`
    - `CRON_SECRET` (optionnel mais recommandé)
 3. Déploie
 

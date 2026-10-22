@@ -1,5 +1,5 @@
 import { generateText, tool } from "ai";
-import { google } from "@ai-sdk/google";
+import { xai } from "@ai-sdk/xai";
 import { z } from "zod";
 
 export const maxDuration = 60;
@@ -22,7 +22,7 @@ export async function GET(request: Request) {
   });
 
   const { text, toolResults } = await generateText({
-    model: google("gemini-2.0-flash"),
+    model: xai("grok-3"),
     system: `Tu es un agent IA spécialisé en agriculture au Bénin.
 Ton rôle : formation et sensibilisation d'un public mixte (agriculteurs, jeunes, coopératives, grand public).
 Ton : mixte (pédagogique + inspirant + parfois alerte sur les risques).
