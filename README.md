@@ -8,33 +8,37 @@ Agent de **formation et sensibilisation** agricole au Bénin.
 - Analyse des tendances mondiales et béninoises
 - Décision spontanee de sujets pertinents
 - Production d'analyses / rapports
-- Rédaction de posts Facebook (ton mixte, public mixte)
+- Rédaction de posts Facebook (ton mixte, public mixte) — à copier-coller manuellement
 - Interface de chat + dashboard
 
 ## Stack
 
 - Next.js 15 (App Router)
-- Vercel AI SDK
+- Vercel AI SDK + **Google Gemini**
 - Vercel Cron Jobs
 - Tailwind CSS
+
+## Clé API Gemini
+
+1. Va sur [Google AI Studio](https://aistudio.google.com/apikey)
+2. Crée une clé API
+3. Ajoute-la dans Vercel : `GOOGLE_GENERATIVE_AI_API_KEY`
 
 ## Démarrage local
 
 ```bash
 npm install
 cp .env.example .env.local
-# Ajoute ta OPENAI_API_KEY
+# Ajoute ta GOOGLE_GENERATIVE_AI_API_KEY
 npm run dev
 ```
 
-## Création de la page Facebook
+## Déploiement Vercel
 
-1. Va sur [facebook.com/pages/create](https://www.facebook.com/pages/create)
-2. Choisis **Entreprise ou marque**
-3. Nom suggéré : **Agri-Bénin Sensibilisation** ou **AgriVeille Bénin**
-4. Catégorie : Agriculture / Formation / Organisation à but non lucratif
-5. Une fois créée, note l'ID de la page et génère un **Page Access Token** (via Meta for Developers)
+1. Importe le repo `kingkoffi/agent-agri-benin`
+2. Variables d'environnement :
+   - `GOOGLE_GENERATIVE_AI_API_KEY`
+   - `CRON_SECRET` (optionnel mais recommandé)
+3. Déploie
 
-## Déploiement
-
-Connecte le repo à Vercel et ajoute les variables d'environnement.
+La veille tourne automatiquement tous les jours à 7h UTC.

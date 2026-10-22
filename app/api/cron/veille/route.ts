@@ -1,5 +1,5 @@
 import { generateText, tool } from "ai";
-import { openai } from "@ai-sdk/openai";
+import { google } from "@ai-sdk/google";
 import { z } from "zod";
 
 export const maxDuration = 60;
@@ -22,7 +22,7 @@ export async function GET(request: Request) {
   });
 
   const { text, toolResults } = await generateText({
-    model: openai("gpt-4o"),
+    model: google("gemini-2.0-flash"),
     system: `Tu es un agent IA spécialisé en agriculture au Bénin.
 Ton rôle : formation et sensibilisation d'un public mixte (agriculteurs, jeunes, coopératives, grand public).
 Ton : mixte (pédagogique + inspirant + parfois alerte sur les risques).
@@ -43,7 +43,6 @@ Puis génère :
 - Une analyse ou un rapport court
 - Un post Facebook prêt à publier (max 400-500 caractères idéalement, avec emojis et hashtags)`,
     tools: {
-      // Placeholder pour de futurs outils de données réelles
       note_topic: tool({
         description: "Enregistre le sujet priorité du jour",
         parameters: z.object({
@@ -56,8 +55,6 @@ Puis génère :
     },
   });
 
-  // Pour l'instant on retourne le résultat.
-  // Plus tard : sauvegarde en Blob/KV + option de publication FB
   return Response.json({
     date: today,
     content: text,
