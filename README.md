@@ -1,14 +1,17 @@
 # Agent IA Agri-Bénin
 
-Agent de **formation et sensibilisation** agricole au Bénin, propulsé par **Grok (xAI)**.
+Agent de **formation et sensibilisation** orienté **innovation technique moderne** et transformation agricole au Bénin, propulsé par **Grok (xAI)**.
+
+Aligné sur le skill [agriculture-benin](https://github.com/kingkoffi/skill-agriculture-benin).
 
 ## Fonctionnalités
 
 - **Veille journalière** (tous les matins à 7h UTC via Vercel Cron)
-- Analyse des tendances mondiales et béninoises
-- Décision spontanee de sujets pertinents
-- Production d'analyses / rapports
-- Rédaction de posts Facebook (ton mixte, public mixte) — à copier-coller manuellement
+- Focus fort sur les innovations techniques et organisationnelles
+- Analyse d'applicabilité au contexte béninois + estimation des retombées (revenus, genre, pénibilité, résilience)
+- Rotation ouverte des thèmes (interdiction de rester trop longtemps sur les cultures classiques)
+- Production d'analyses / rapports courts
+- Rédaction de posts Facebook (ton pédagogique + concret) — à copier-coller manuellement
 - Interface de chat + dashboard
 
 ## Stack
